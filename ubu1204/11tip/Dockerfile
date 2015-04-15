@@ -24,5 +24,10 @@ RUN chmod -cR 600 /home/shippable/.ssh/*
 # Upgrade rvm to support ruby 2.2 stable
 ADD upgradeRvm.sh /home/shippable/setup/upgradeRvm.sh
 RUN /bin/bash /home/shippable/setup/upgradeRvm.sh
+
+# Install glob2
+ADD installGlob.sh /home/shippable/setup/installGlob.sh
+RUN /bin/bash /home/shippable/setup/installGlob.sh
+
 # expose port 22 to enable ssh
 EXPOSE 22

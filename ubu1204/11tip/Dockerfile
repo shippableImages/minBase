@@ -25,9 +25,9 @@ RUN chmod -cR 600 /home/shippable/.ssh/*
 ADD upgradeRvm.sh /home/shippable/setup/upgradeRvm.sh
 RUN /bin/bash /home/shippable/setup/upgradeRvm.sh
 
-# Install glob2
-ADD installGlob.sh /home/shippable/setup/installGlob.sh
-RUN /bin/bash /home/shippable/setup/installGlob.sh
+# Install appbase deps
+ADD add_ds_deps.sh /home/shippable/setup/add_ds_deps.sh
+RUN /bin/bash /home/shippable/setup/add_ds_deps.sh
 
 # expose port 22 to enable ssh
 EXPOSE 22

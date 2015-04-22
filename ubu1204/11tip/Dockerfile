@@ -26,8 +26,8 @@ ADD upgradeRvm.sh /home/shippable/setup/upgradeRvm.sh
 RUN /bin/bash /home/shippable/setup/upgradeRvm.sh
 
 # Install appbase deps
-ADD add_deps.sh /home/shippable/setup/add_deps.sh
-RUN /bin/bash /home/shippable/setup/add_deps.sh
+ADD add_ds_deps.sh /home/shippable/setup/add_ds_deps.sh
+RUN /bin/bash /home/shippable/setup/add_ds_deps.sh
 
 # expose port 22 to enable ssh
 EXPOSE 22
